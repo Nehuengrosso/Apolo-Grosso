@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+main{
+    height: calc(100vh - 10px - 10em);
+    width: 100%;
+}
+body{
+    min-height: 100vh;
+    background-image: url(./img/foto-manos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+footer p{
+    color: rgba(255, 255, 255, 0.63);
+}
+
+/* MENU */
+#boton-menu{
+    display: none;
+}
+.centenedor__menu{
+    height: 10em;
+    display: flex;
+    flex-direction: row;
+}
+.menu{
+    background-color: rgba(0, 0, 0, 0.379);
+    width: 100%;
+    height: 10em;
+    border-radius: 0 0 2em 2em;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.lista__menu{
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+    font-size: 4rem;
+}
+.lista__menu li{
+    display: flex;
+    justify-items: center;
+}
+.lista__menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #FCD555;
+    font-family: 'Allerta Stencil', sans-serif;
+    padding: 5px 16px;
+    border-radius: 10px;
+    transition: background-color 1s;
+}
+.lista__menu a:hover{
+    background-color: rgba(0, 0, 0, 0.331);
+    text-decoration: underline;
+}
+
+/* INDEX */
+.home{
+    display: flex;
+    justify-content: center;
+}
+.capa__home{
+    height: 500px;
+    width: 1000px;
+    display: grid;
+    grid-template-areas:
+    "titulo titulo img"
+    "texto texto2 img";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10em 10em;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.544);
+    border-radius: 2em;
+    margin-top: 1em;
+}
+.titulo__inicio{
+    display: grid;
+    grid-area: titulo;
+    justify-content: center;
+}
+.titulo__inicio h3{
+    color: #FCD555;
+    font-size: 3rem;
+    justify-items: center;
+}
+.parrafo__inicio{
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-area: texto;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 3em;
+    text-align: center;
+}
+.contenedor__imagen{
+    display: flex;
+    width: 100%;
+    grid-area: img;
+}
+.imagen__foto{
+    height: 30em;
+    border-radius: 2em;
+}
+
+.contenedor__boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton__reserva{
+    padding: 0.5em 2.5em;
+    background-color: #FCD555;
+    border-radius: 1em;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    transition: color 1s;
+    grid-area: texto2;
+}
+.boton__reserva:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+/* RESERVAS */
+.contenedor__formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.formulario{
+    display: flex;
+}
+.formulario fieldset p{
+    color: white;
+    text-align: center;
+    margin: 1em;
+    text-transform: uppercase;
+}
+.formulario fieldset{
+    border: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.764);
+    border-radius: 2em;
+}
+.formulario fieldset h1{
+    display: flex;
+    color: #FCD555;
+    padding: 2em;
+    background-color: rgba(37, 37, 37, 0.131);
+    border-radius: 2em;
+}
+.enviar{
+    margin: 1em;
+    height: 3em;
+    width: 15em;
+    border-radius: 1em;
+    background-color: #967300;
+}
+.cuadroTexto{
+    text-align: center;
+}
+
+/* HORARIOS */
+
+.contenedor__horarios{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.cuadro__horario{
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 15em;
+    width: 12em;
+    border-radius: 2em;
+}
+.texto__cuadro{
+    color: white;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.4rem;
+}
+/* PRECIOS */
+.cuadroPrecios{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cuadroPrecios--contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38em;
+    width: 70em;
+    background-color: rgba(0, 0, 0, 0.738);
+    border-radius: 2em;
+}
+.cuadroPrecios--contenido ul{
+    list-style-type: circle;
+}
+.cuadroPrecios ul li{
+    color: white;
+    margin: 1.5em;
+    text-align: left;
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* UBICACION */
+.contenedor__aboutUs{
+    display: flex;
+    justify-content: center;
+}
+.fondo__aboutUs{
+    align-items: center;
+    height: 50em;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.522);
+    border-radius: 2em;
+    display: grid;
+    grid-template-areas: 
+        "imagen texto"
+        "texto2 imagen2";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 11em;
+    
+}
+.imagen__us{
+    display: flex;
+    height: 100%;
+    grid-area: imagen;
+    align-items: center;
+    justify-content: center;
+    
+}
+.imagen__us--foto{
+    display: flex;
+    height: 20em;
+    border-radius: 2em;
+}
+.parrafo__us{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-area: texto;
+    color: white;
+    font-size: 1.4rem;
+}
+.parrafo2{
+    color: #FCD555;
+    font-size: 1.8rem;
+}
+.imagen__mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    grid-area: imagen2;
+
+}
+.imagenUbicacion{
+    height: 20em;
+    width: 30em;
+    border-radius: 1em;
+}
+.parrafo__ubicacion{
+    grid-area: texto2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 1em;
+}
+
+#botonMapa{
+    display: flex;
+    height: 3em;
+    width: 10em;
+    background-color: #FCD555;
+    border-radius: 1em;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.mapaApolo:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.mapaApolo{
+    padding: 5px 25px;
+    background-color: #FCD555;
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+    /* menu chico */
+    .centenedor__menu{
+        height: 10em;
+        display: flex;
+        position: fixed;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .menu{
+        background-color: rgba(0, 0, 0, 0.379);
+        width: 100%;
+        height: 10em;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .lista__menu{
+        display: flex;
+        flex-wrap: nowrap;
+        position: fixed;
+        font-size: 1.5rem;
+    }
+    .lista__menu li{
+        display: flex;
+        margin: 1em;
+
+    }
+    .menu a{
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #FCD555;
+        font-family: 'Allerta Stencil', sans-serif;
+
+    }
+    header a:link{
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #FCD555;
+
+    }
+    header a:hover{
+        text-decoration: underline;
+    }
+    /*index chico*/
+    .capa__home{
+        height: 40em;
+        width: 70em;
+        margin-top: 120px;
+    }
+
+    .boton__reserva{
+        padding: 5px 25px;
+        background-color: #FCD555;
+        display: inline-flex;
+        border-radius: 1em;
+        color: black;
+        text-decoration: none;
+        height: 30px;
+    }
+    .titulo__inicio h3{
+        text-align: center;
+    }
+    .imagen__foto{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 550px){
+    /*MENU CELULAR*/
+    .centenedor__menu{
+        height: 10em;
+        display: flex;
+    }
+    .menu{
+        background-color: rgba(0, 0, 0, 0.379);
+        width: 100%;
+        height: 10em;
+        border-radius: 0 0 2em 2em;
+        display: flex;
+
+    }
+    .lista__menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.2rem;
+    }
+    .lista__menu li{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .lista__menu a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #FCD555;
+        font-family: 'Allerta Stencil', sans-serif;
+        padding: 0 0.2em;
+        border-radius: 1em;
+        transition: background-color 1s;
+    }
+    .lista__menu a:hover{
+        background-color: rgba(0, 0, 0, 0.331);
+        text-decoration: underline;
+    }
+    /*INDEX CELULAR*/
+    
+    .capa__home{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        background-color: rgba(0, 0, 0, 0.555);
+        width: 100%;
+        height: 100%;
+        margin-top: 12em;
+        padding: 2em 0;
+    }
+    .titulo__inicio h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .parrafo__inicio{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 5em;
+        margin-left: 1em;
+        justify-content: center;
+        text-align: center;
+    }
+    .parrafo__inicio p{
+        color: white;
+        font-size: 1.5rem;
+        width: 15em;
+    }
+    .boton__reserva{
+        padding: 0.5em 2.5em;
+        background-color: #FCD555;
+        display: inline-flex;
+        border-radius: 1em;
+        color: black;
+        text-decoration: none;
+        height: 3em;
+    }
+    .boton__reserva:hover{
+        text-decoration: underline;
+    }
+    .contenedor__imagen{
+        justify-content: center;
+    }
+    .imagen__foto{
+        height: 20em;
+    }
+    /*PRECIOS CELULAR*/
+    .cuadroPrecios ul li{
+        font-size: 1.5rem;
+    }
+    /*HORARIOS CELULAR*/
+    
+    .contenedor__horarios{
+        display: flex;
+        flex-wrap: wrap;
+        height: 35em;
+        gap: 1em;
+        padding-top: 10em;
+    }
+    .cuadro__horario{
+        background-color: rgba(0, 0, 0, 0.719);
+        height: 10em;
+        width: 7em;
+        border-radius: 2em;
+    }
+    .texto__cuadro{
+        color: white;
+        text-align: center;
+        margin-top: 1em;
+        font-size: 1rem;
+}
+    .fondo__aboutUs{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1em;
+        background-color: rgba(0, 0, 0, 0.522);
+        border-radius: 2em;
+        margin-top: 11em;
+
+    }
+    .imagen__us--foto{
+        display: flex;
+        height: 15em;
+        border-radius: 1em;
+        margin-top: 1em;
+    }
+    .parrafo__us{
+        font-size: 1rem;
+        gap: 1em;
+    }
+    .imagenUbicacion{
+        height: 10em;
+        width: 20em;
+        border-radius: 1em;
+    }
+    .parrafo__ubicacion{
+        font-size: 1rem;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+}
