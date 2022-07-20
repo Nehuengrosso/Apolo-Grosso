@@ -32,50 +32,25 @@ footer p{
 #boton-menu{
     display: none;
 }
-.centenedor__menu{
-    height: 10em;
-    display: flex;
-    flex-direction: row;
+#activo{
+    background-color: #FCD555;
 }
-.menu{
-    background-color: rgba(0, 0, 0, 0.379);
-    width: 100%;
-    height: 10em;
-    border-radius: 0 0 2em 2em;
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+.navegacion{
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.171);
+    border-radius: 0 0 1em 1em;
 }
-.lista__menu{
-    display: flex;
-    flex-wrap: nowrap;
-    position: fixed;
-    font-size: 4rem;
-}
-.lista__menu li{
-    display: flex;
-    justify-items: center;
-}
-.lista__menu a{
-    text-decoration: none;
-    text-transform: capitalize;
-    color: #FCD555;
-    font-family: 'Allerta Stencil', sans-serif;
-    padding: 5px 16px;
-    border-radius: 10px;
-    transition: background-color 1s;
-}
-.lista__menu a:hover{
-    background-color: rgba(0, 0, 0, 0.331);
-    text-decoration: underline;
-}
-.lista__menu a:active{
+.navegacion a{
+    height: 4rem;
     color: white;
+    font-size: 20px;
+    transition: all 1s;
+    font-family: 'Times New Roman', Times, serif;
 }
-
-
+.navegacion a:hover{
+    color: black;
+    background-color: #fcd555;
+}
 /* INDEX */
 .home{
     display: flex;
@@ -159,6 +134,7 @@ footer p{
 }
 .formulario{
     display: flex;
+    margin-bottom: 80px;
 }
 .formulario fieldset p{
     color: white;
@@ -214,7 +190,7 @@ footer p{
 .texto__cuadro{
     color: white;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1.2em;
     font-size: 1.4rem;
 }
 /* PRECIOS */
@@ -232,6 +208,7 @@ footer p{
     width: 70em;
     background-color: rgba(0, 0, 0, 0.738);
     border-radius: 2em;
+    margin-bottom: 10em;
 }
 .cuadroPrecios--contenido ul{
     list-style-type: circle;
@@ -301,7 +278,6 @@ footer p{
     align-items: center;
     height: 100%;
     grid-area: imagen2;
-    /* transform: skewY(3deg); */
     transition: all 1s;
 }
 .imagen__mapa:hover{
@@ -352,52 +328,6 @@ footer p{
 }
 
 @media screen and (max-width: 1024px) {
-    /* menu chico */
-    .centenedor__menu{
-        height: 10em;
-        display: flex;
-        position: fixed;
-        flex-wrap: nowrap;
-        flex-direction: row;
-    }
-    .menu{
-        background-color: rgba(0, 0, 0, 0.379);
-        width: 100%;
-        height: 10em;
-        border-radius: 0 0 20px 20px;
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-    .lista__menu{
-        display: flex;
-        flex-wrap: nowrap;
-        position: fixed;
-        font-size: 1.5rem;
-    }
-    .lista__menu li{
-        display: flex;
-        margin: 1em;
-
-    }
-    .menu a{
-        text-decoration: none;
-        text-transform: capitalize;
-        color: #FCD555;
-        font-family: 'Allerta Stencil', sans-serif;
-
-    }
-    header a:link{
-        text-decoration: none;
-        text-transform: capitalize;
-        color: #FCD555;
-
-    }
-    header a:hover{
-        text-decoration: underline;
-    }
     /*index chico*/
     .capa__home{
         height: 40em;
@@ -423,44 +353,12 @@ footer p{
 }
 @media screen and (max-width: 550px){
     /*MENU CELULAR*/
-    .centenedor__menu{
-        height: 10em;
-        display: flex;
+    .navegacion{
+        height: 8rem;
+        background-color: rgba(0, 0, 0, 0.171);
+        border-radius: 0 0 1em 1em;
     }
-    .menu{
-        background-color: rgba(0, 0, 0, 0.379);
-        width: 100%;
-        height: 10em;
-        border-radius: 0 0 2em 2em;
-        display: flex;
-
-    }
-    .lista__menu{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 1.2rem;
-    }
-    .lista__menu li{
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
-        margin: 0;
-        padding: 0;
-    }
-    .lista__menu a{
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #FCD555;
-        font-family: 'Allerta Stencil', sans-serif;
-        padding: 0 0.2em;
-        border-radius: 1em;
-        transition: background-color 1s;
-    }
-    .lista__menu a:hover{
-        background-color: rgba(0, 0, 0, 0.331);
-        text-decoration: underline;
-    }
+    
     /*INDEX CELULAR*/
     
     .capa__home{
@@ -470,7 +368,7 @@ footer p{
         background-color: rgba(0, 0, 0, 0.555);
         width: 100%;
         height: 100%;
-        margin-top: 12em;
+        margin-top: 2em;
         padding: 2em 0;
     }
     .titulo__inicio h3{
@@ -482,7 +380,7 @@ footer p{
         height: 100%;
         display: flex;
         gap: 5em;
-        margin-left: 1em;
+        margin-left: 0em;
         justify-content: center;
         text-align: center;
     }
@@ -513,6 +411,13 @@ footer p{
     .cuadroPrecios ul li{
         font-size: 1.5rem;
     }
+    .cuadroPrecios{
+        height: 100%;
+    }
+    /*RESERVAS CELULAR*/
+    .contenedor__formulario{
+        height: 100%;
+    }
     /*HORARIOS CELULAR*/
     
     .contenedor__horarios{
@@ -524,7 +429,7 @@ footer p{
     }
     .cuadro__horario{
         background-color: rgba(0, 0, 0, 0.719);
-        height: 10em;
+        height: 12em;
         width: 7em;
         border-radius: 2em;
     }
@@ -534,6 +439,7 @@ footer p{
         margin-top: 1em;
         font-size: 1rem;
 }
+/*ABOUT US CELULAR*/
     .fondo__aboutUs{
         display: flex;
         flex-direction: column-reverse;
@@ -541,12 +447,11 @@ footer p{
         gap: 1em;
         background-color: rgba(0, 0, 0, 0.522);
         border-radius: 2em;
-        margin-top: 11em;
-
+        margin-top: 2em;
     }
     .imagen__us--foto{
         display: flex;
-        height: 15em;
+        height: 10em;
         border-radius: 1em;
         margin-top: 1em;
     }
