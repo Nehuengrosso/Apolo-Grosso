@@ -1,0 +1,23 @@
+/* MENU */
+#boton-menu{
+    display: none;
+}
+#activo{
+    background-color: map-get($map: $colores, $key: "primario");
+}
+.navegacion{
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.171);
+    border-radius: 0 0 1em 1em;
+}
+.navegacion a{
+    height: 4rem;
+    color: white;
+    font-size: $medium;
+    transition: all 1s;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navegacion a:hover{
+    color: black;
+    background-color: map-get($map: $colores, $key: "primario");
+}

@@ -1,0 +1,139 @@
+/*INDEX HOME*/
+
+.home{
+    @include flex (center, null);
+}
+.capa__home{
+    @extend .fondo__transparente;
+    height: 500px;
+    width: 1000px;
+    display: grid;
+    grid-template-areas:
+    "titulo titulo img"
+    "texto texto2 img";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10em 10em;
+    align-content: center;    
+    border-radius: 2em;
+    margin-top: 1em;
+}
+.titulo__inicio{
+    display: grid;
+    grid-area: titulo;
+    justify-content: center;
+}
+.titulo__inicio h1{
+    color: map-get($map: $colores, $key: "primario" );
+    font-size: $large;
+    justify-items: center;
+}
+.parrafo__inicio{
+    @include flex (center, center);
+    width: 100%;
+    grid-area: texto;
+    color: white;
+    font-size: $small;
+    margin-left: 3em;
+    text-align: center;
+}
+.contenedor__imagen{
+    display: flex;
+    width: 100%;
+    grid-area: img;
+}
+.imagen__foto{
+    height: 30em;
+    border-radius: 2em;
+}
+.contenedor__boton{
+    @include flex (center, center);
+}
+.boton__reserva{
+    padding: 0.5em 2.5em;
+    background-color: map-get($map: $colores, $key: "primario" );
+    border-radius: 1em;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    transition: all 1s;
+    grid-area: texto2;
+    &:hover{
+        @extend .hover__boton;
+    }
+    &:visited{
+        color: white;
+    }
+}
+
+/*Index tablet*/
+@media screen and (max-width: 1024px) {
+    .capa__home{
+        height: 40em;
+        width: 70em;
+        margin-top: 120px;
+    }
+
+    .boton__reserva{
+        padding: 5px 25px;
+        background-color:map-get($map: $colores, $key: "primario" );
+        display: inline-flex;
+        border-radius: 1em;
+        color: black;
+        text-decoration: none;
+        height: 30px;
+    }
+    .titulo__inicio h1{
+        text-align: center;
+    }
+    .imagen__foto{
+        height: 200px;
+    }
+}
+
+/*Index celular*/
+@media screen and (max-width: 550px){
+    .capa__home{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        background-color: map-get($map: $colores, $key: "fondo" );
+        width: 100%;
+        height: 100%;
+        margin-top: 2em;
+        padding: 2em 0;
+    }
+    .titulo__inicio h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .parrafo__inicio{
+        @include flex (center, center);
+        width: 100%;
+        height: 100%;
+        gap: 5em;
+        margin-left: 0em;
+    }
+    .parrafo__inicio p{
+        color: white;
+        font-size: 1.5rem;
+        width: 15em;
+    }
+    .boton__reserva{
+        padding: 0.5em 2.5em;
+        background-color: map-get($map: $colores, $key: "primario" );
+        display: inline-flex;
+        border-radius: 1em;
+        color: black;
+        text-decoration: none;
+        height: 3em;
+    }
+    .boton__reserva:hover{
+        text-decoration: underline;
+    }
+    .contenedor__imagen{
+        justify-content: center;
+    }
+    .imagen__foto{
+        height: 20em;
+    }
+}

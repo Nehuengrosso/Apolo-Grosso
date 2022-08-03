@@ -1,0 +1,411 @@
+/*font-zise*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+main {
+  height: calc(100vh - 10px - 10em);
+  width: 100%; }
+
+body {
+  min-height: 100vh;
+  background-image: url(../img/foto-manos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.fondo__transparente, .capa__home, .formulario fieldset, .cuadroPrecios--contenido, .fondo__aboutUs {
+  background-color: rgba(0, 0, 0, 0.738); }
+
+.hover__boton, .boton__reserva:hover, .enviar:hover {
+  text-decoration: underline;
+  color: white;
+  background-color: black; }
+
+/* MENU */
+#boton-menu {
+  display: none; }
+
+#activo {
+  background-color: #FCD555; }
+
+.navegacion {
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.171);
+  border-radius: 0 0 1em 1em; }
+
+.navegacion a {
+  height: 4rem;
+  color: white;
+  font-size: 2rem;
+  transition: all 1s;
+  font-family: 'Times New Roman', Times, serif; }
+
+.navegacion a:hover {
+  color: black;
+  background-color: #FCD555; }
+
+/*INDEX HOME*/
+.home {
+  display: flex;
+  justify-content: center; }
+
+.capa__home {
+  height: 500px;
+  width: 1000px;
+  display: grid;
+  grid-template-areas: "titulo titulo img" "texto texto2 img";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10em 10em;
+  align-content: center;
+  border-radius: 2em;
+  margin-top: 1em; }
+
+.titulo__inicio {
+  display: grid;
+  grid-area: titulo;
+  justify-content: center; }
+
+.titulo__inicio h1 {
+  color: #FCD555;
+  font-size: 3rem;
+  justify-items: center; }
+
+.parrafo__inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-area: texto;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 3em;
+  text-align: center; }
+
+.contenedor__imagen {
+  display: flex;
+  width: 100%;
+  grid-area: img; }
+
+.imagen__foto {
+  height: 30em;
+  border-radius: 2em; }
+
+.contenedor__boton {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.boton__reserva {
+  padding: 0.5em 2.5em;
+  background-color: #FCD555;
+  border-radius: 1em;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  transition: all 1s;
+  grid-area: texto2; }
+  .boton__reserva:visited {
+    color: white; }
+
+/*Index tablet*/
+@media screen and (max-width: 1024px) {
+  .capa__home {
+    height: 40em;
+    width: 70em;
+    margin-top: 120px; }
+  .boton__reserva {
+    padding: 5px 25px;
+    background-color: #FCD555;
+    display: inline-flex;
+    border-radius: 1em;
+    color: black;
+    text-decoration: none;
+    height: 30px; }
+  .titulo__inicio h1 {
+    text-align: center; }
+  .imagen__foto {
+    height: 200px; } }
+
+/*Index celular*/
+@media screen and (max-width: 550px) {
+  .capa__home {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: rgba(0, 0, 0, 0.738);
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+    padding: 2em 0; }
+  .titulo__inicio h1 {
+    font-size: 2rem;
+    text-align: center; }
+  .parrafo__inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 5em;
+    margin-left: 0em; }
+  .parrafo__inicio p {
+    color: white;
+    font-size: 1.5rem;
+    width: 15em; }
+  .boton__reserva {
+    padding: 0.5em 2.5em;
+    background-color: #FCD555;
+    display: inline-flex;
+    border-radius: 1em;
+    color: black;
+    text-decoration: none;
+    height: 3em; }
+  .boton__reserva:hover {
+    text-decoration: underline; }
+  .contenedor__imagen {
+    justify-content: center; }
+  .imagen__foto {
+    height: 20em; } }
+
+/*RESERVAS*/
+.contenedor__formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.formulario {
+  display: flex;
+  margin-bottom: 90px;
+  width: 300px; }
+
+.formulario fieldset p {
+  color: white;
+  text-align: center;
+  margin: 1em;
+  text-transform: uppercase;
+  font-size: 1.5rem; }
+
+.formulario fieldset {
+  text-align: center;
+  border-radius: 2em;
+  margin-left: 3em; }
+
+.formulario fieldset h1 {
+  display: flex;
+  color: #FCD555;
+  padding: 1em; }
+
+.enviar {
+  margin: 1em;
+  height: 3em;
+  width: 15em;
+  border-radius: 1em;
+  background-color: #967300;
+  transition: all 1s; }
+
+.cuadroTexto {
+  text-align: center;
+  height: 30px;
+  width: 160px;
+  border-radius: 30px; }
+
+.selector {
+  height: 30px;
+  width: 90px;
+  text-align: center;
+  border-radius: 30px; }
+
+@media screen and (max-width: 550px) {
+  .contenedor__formulario {
+    height: 100%; } }
+
+/* HORARIOS */
+.contenedor__horarios {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+  flex-wrap: wrap; }
+
+.cuadro__horario {
+  background-color: rgba(0, 0, 0, 0.738);
+  height: 20em;
+  width: 20em;
+  border-radius: 2em; }
+
+.texto__cuadro {
+  color: white;
+  text-align: center;
+  margin-top: 1.2em;
+  font-size: 2rem; }
+
+@media screen and (max-width: 550px) {
+  .contenedor__horarios {
+    display: flex;
+    flex-wrap: wrap;
+    height: 35em;
+    gap: 1em;
+    padding-top: 10em; }
+  .cuadro__horario {
+    background-color: rgba(0, 0, 0, 0.738);
+    height: 12em;
+    width: 7em;
+    border-radius: 2em; }
+  .texto__cuadro {
+    color: white;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1rem; } }
+
+/* PRECIOS */
+.cuadroPrecios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.cuadroPrecios--contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38em;
+  width: 70em;
+  border-radius: 2em;
+  margin-bottom: 10em; }
+
+.cuadroPrecios--contenido ul {
+  list-style-type: circle; }
+
+.cuadroPrecios ul li {
+  color: white;
+  margin: 1.5em;
+  text-align: left;
+  font-size: 3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif; }
+
+@media screen and (max-width: 550px) {
+  .cuadroPrecios ul li {
+    font-size: 1.5rem; }
+  .cuadroPrecios {
+    height: 100%; } }
+
+/* ABOUT US */
+.contenedor__aboutUs {
+  display: flex;
+  justify-content: center; }
+
+.fondo__aboutUs {
+  align-items: center;
+  height: 50em;
+  width: 80%;
+  border-radius: 2em;
+  display: grid;
+  grid-template-areas: "imagen texto" "texto2 imagen2";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 1em; }
+
+.imagen__us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  grid-area: imagen; }
+
+.imagen__us--foto {
+  display: flex;
+  height: 20em;
+  border-radius: 2em;
+  transition: all 1s; }
+
+.imagen__us--foto:hover {
+  transform: scale(1.1, 1.1); }
+
+.parrafo__us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+  text-align: center;
+  grid-area: texto;
+  color: white;
+  font-size: 1.5rem; }
+
+.parrafo2 {
+  color: #FCD555;
+  font-size: 2rem; }
+
+.imagen__mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  grid-area: imagen2;
+  transition: all 1s; }
+
+.imagen__mapa:hover {
+  transform: scale(1.1, 1.1); }
+
+.imagenUbicacion {
+  height: 20em;
+  width: 30em;
+  border-radius: 1em; }
+
+.parrafo__ubicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: texto2;
+  color: white;
+  flex-direction: column;
+  font-size: 1.5rem;
+  gap: 1em; }
+
+#botonMapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 10em;
+  background-color: #FCD555;
+  border-radius: 1em;
+  transition: all 1s; }
+  #botonMapa:hover {
+    background-color: black; }
+  #botonMapa:visited {
+    color: white; }
+
+@media screen and (max-width: 550px) {
+  .fondo__aboutUs {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 1em;
+    background-color: rgba(0, 0, 0, 0.738);
+    border-radius: 2em;
+    margin-top: 2em; }
+  .imagen__us--foto {
+    display: flex;
+    height: 10em;
+    border-radius: 1em;
+    margin-top: 1em; }
+  .parrafo__us {
+    font-size: 1rem;
+    gap: 1em; }
+  .imagenUbicacion {
+    height: 10em;
+    width: 20em;
+    border-radius: 1em; }
+  .parrafo__ubicacion {
+    font-size: 1rem;
+    padding-bottom: 1em;
+    text-align: center; } }

@@ -1,0 +1,33 @@
+/* PRECIOS */
+
+.cuadroPrecios{
+    @include flex (center, center);
+    height: 100vh;
+}
+.cuadroPrecios--contenido{
+    @extend .fondo__transparente;
+    @include flex (center, center);
+    height: 38em;
+    width: 70em;
+    border-radius: 2em;
+    margin-bottom: 10em;
+}
+.cuadroPrecios--contenido ul{
+    list-style-type: circle;
+}
+.cuadroPrecios ul li{
+    color: white;
+    margin: 1.5em;
+    text-align: left;
+    font-size: $large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media screen and (max-width: 550px){
+    .cuadroPrecios ul li{
+        font-size: $small;
+    }
+    .cuadroPrecios{
+        height: 100%;
+    }
+}

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+main{
+    height: calc(100vh - 10px - 10em);
+    width: 100%;
+}
+body{
+    min-height: 100vh;
+    background-image: url(../img/foto-manos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.fondo__transparente{
+    background-color: map-get($colores, "fondo" );
+}
+
+.hover__boton{
+        text-decoration: underline;
+        color: white;
+        background-color: black;
+}
+

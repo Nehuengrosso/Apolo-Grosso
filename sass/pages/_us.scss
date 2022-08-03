@@ -1,0 +1,116 @@
+/* ABOUT US */
+
+.contenedor__aboutUs{
+    @include flex (center, null)
+}
+.fondo__aboutUs{
+    @extend .fondo__transparente;
+    align-items: center;
+    height: 50em;
+    width: 80%;
+    border-radius: 2em;
+    display: grid;
+    grid-template-areas: 
+        "imagen texto"
+        "texto2 imagen2";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 1em;
+    
+}
+.imagen__us{
+    @include flex (center, center);
+    display: flex;
+    height: 100%;
+    grid-area: imagen;
+}
+.imagen__us--foto{
+    display: flex;
+    height: 20em;
+    border-radius: 2em;
+    transition: all 1s;
+}
+.imagen__us--foto:hover{
+    transform: scale(1.1, 1.1);
+}
+.parrafo__us{
+    @include flex (center, center);
+    flex-direction: column;
+    gap: 1.5em;
+    text-align: center;
+    grid-area: texto;
+    color: white;
+    font-size: $small;
+}
+.parrafo2{
+    color: map-get($map: $colores, $key: "primario" );
+    font-size: $medium;
+}
+.imagen__mapa{
+    @include flex (center, center);
+    height: 100%;
+    grid-area: imagen2;
+    transition: all 1s;
+}
+.imagen__mapa:hover{
+    transform: scale(1.1, 1.1);
+}
+.imagenUbicacion{
+    height: 20em;
+    width: 30em;
+    border-radius: 1em;
+}
+.parrafo__ubicacion{
+    @include flex (center, center);
+    text-align: center;
+    grid-area: texto2;
+    color: white;
+    flex-direction: column;
+    font-size: $small;
+    gap: 1em;
+}
+
+#botonMapa{
+    @include flex (center, center);
+    height: 3em;
+    width: 10em;
+    background-color: map-get($map: $colores, $key: "primario" );
+    border-radius: 1em;
+    transition: all 1s;
+    &:hover{
+        background-color: black;
+    }
+    &:visited{
+        color: white;
+    }
+}
+@media screen and (max-width: 550px){
+    .fondo__aboutUs{
+        @include flex (null, center);
+        flex-direction: column-reverse;
+        gap: 1em;
+        background-color: map-get($map: $colores, $key: "fondo" );
+        border-radius: 2em;
+        margin-top: 2em;
+    }
+    .imagen__us--foto{
+        display: flex;
+        height: 10em;
+        border-radius: 1em;
+        margin-top: 1em;
+    }
+    .parrafo__us{
+        font-size: $xsmall;
+        gap: 1em;
+    }
+    .imagenUbicacion{
+        height: 10em;
+        width: 20em;
+        border-radius: 1em;
+    }
+    .parrafo__ubicacion{
+        font-size: $xsmall;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+}

@@ -1,0 +1,41 @@
+/* HORARIOS */
+
+.contenedor__horarios{
+    @include flex (space-evenly, center);
+    height: 90vh;
+    flex-wrap: wrap;
+}
+.cuadro__horario{
+    background-color: map-get($map: $colores, $key: "fondo" );
+    height: 20em;
+    width: 20em;
+    border-radius: 2em;
+}
+.texto__cuadro{
+    color: white;
+    text-align: center;
+    margin-top: 1.2em;
+    font-size: $medium;
+}
+
+@media screen and (max-width: 550px){
+    .contenedor__horarios{
+        display: flex;
+        flex-wrap: wrap;
+        height: 35em;
+        gap: 1em;
+        padding-top: 10em;
+    }
+    .cuadro__horario{
+        background-color: map-get($map: $colores, $key: "fondo" );
+        height: 12em;
+        width: 7em;
+        border-radius: 2em;
+    }
+    .texto__cuadro{
+        color: white;
+        text-align: center;
+        margin-top: 1em;
+        font-size: $xsmall;
+}
+}
